@@ -1,19 +1,71 @@
-*{
+* {
   padding: 0px;
   margin: 0px;
 }
 
+body {
+  background-color: #292929;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game {
+  background-color: white;
+  padding: 30px;
+  height: 600px;
+}
+
+div.game-board {
+  background-color: black;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  align-content: center;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
+.status {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 10px;
+}
 
 .square {
-    background: #fff;
-    border: 1px solid #999;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 34px;
-    height: 34px;
-    margin-right: -1px;
-    margin-top: -1px;
-    padding: 0;
-    text-align: center;
-    width: 34px;
-  }
+  background: #fff;
+  border: 4px solid #000000;
+  font-size: 44px;
+  font-weight: bold;
+  line-height: 24px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  height: 70px;
+  width: 70px;
+}
+
+li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+li > button {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 17px;
+  width: 300px;
+  height: 30px;
+  border: solid 3px black;
+}
+
+.game-info {
+  text-align: center;
+  align-content: center;
+}
