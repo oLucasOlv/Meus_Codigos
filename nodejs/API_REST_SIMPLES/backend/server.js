@@ -1,7 +1,24 @@
-require("dotenv").config();
-const app = require("./src/app");
-const PORT = process.env.PORT;
+import dotenv from "dotenv";
+dotenv.config(); // Precisa ser chamado ANTES de acessar process.env
+
+import mongoose from "mongoose";
+import app from "./src/app.js"; 
+
+const PORT = process.env.PORT || 8080;
+const MONGO_URI = "mongodb+srv://lucas:28g1GXpMaVxPK1jv@primeiroprojeto.g9xod.mongodb.net/?retryWrites=true&w=majority&appName=primeiroProjeto"
+// const MONGO_URI = process.env.TESTE
+
+
+if (!MONGO_URI) {
+  console.error("Erro: MONGO URI não definido no .env!");
+  process.exit(1); // Sai do processo para evitar comportamento inesperado
+}
+
+mongoose
+  .connect(MONGO_URI)
+  .then(() => console.log("Banco de dados conectado!"))
+  .catch((error) => console.log("Erro ao conectar:", error));
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Servidor rodando na porta ${PORT}`);
 });

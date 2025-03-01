@@ -1,10 +1,9 @@
-const express = require("express");
+import express from "express";
+import tasksRoutes from "./routes/tasksRoutes.js"; 
+
 const app = express();
 
 app.use(express.json());
-
-const tasksRoutes = require("./routes/tasksRoutes");
-const index = require("./routes/index");
 
 app.use("/tasks", tasksRoutes);
 
@@ -17,4 +16,4 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).json({ error: err.message });
 });
 
-module.exports = app;
+export default app;
