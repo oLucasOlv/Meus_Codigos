@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-dotenv.config(); // Precisa ser chamado ANTES de acessar process.env
+dotenv.config();
 
 import mongoose from "mongoose";
 import app from "./src/app.js"; 
