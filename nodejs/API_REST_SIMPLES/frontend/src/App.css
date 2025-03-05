@@ -5,6 +5,7 @@
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+    height: 80vh;
   }
 
 
@@ -16,7 +17,7 @@
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  max-width: 500px;
+
   margin: 0 auto;
 }
 
@@ -71,7 +72,6 @@
 
 /* Container principal para a lista */
 .task-list {
-  max-width: 600px;        /* Largura máxima do container */
   margin: 40px auto;       /* Centraliza horizontalmente */
   padding: 20px;
   background-color: #2c2c2c;
@@ -79,16 +79,38 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-.task-section {
+.task-section-container {
+  height: 20vh;
+  overflow-y: auto;
+}
+
+/* .task-section {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: #1e1e1e;
   padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+} */
+.task-section {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1e1e1e;
+  padding: 10px;
+  margin-bottom: 10px;
   border-radius: 10px;
 }
 
-.task-section > p {
+.task-section > p{
   margin: 10px;
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-width: 150px;
+  text-align: left;
+
 }
 
 /* Título da lista */
@@ -99,29 +121,20 @@
   color: #f0f0f0;
 }
 
-/* Cada cartão (card) de tarefa */
-.task-card {
-  background-color: #fff;        /* Fundo branco para destacar */
-  color: #333;                   /* Texto escuro dentro do card */
-  border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 15px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Efeito hover no card */
-.task-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
 
 /* Título da tarefa dentro do card */
 .task-title {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #007bff;   /* Azul para destacar */
+  font-size: 1rem;
+  color: #ed261c;   
   margin-bottom: 8px;
+}
+
+.task-section > input {
+  max-width: 150px;
+  border-style: solid;
+  border-color: #555;
+  margin: 10px;
+  background-color: #007bff00;
 }
 
 /* Descrição da tarefa */

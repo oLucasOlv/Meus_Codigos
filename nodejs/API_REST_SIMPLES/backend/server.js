@@ -4,9 +4,8 @@ dotenv.config();
 import mongoose from "mongoose";
 import app from "./src/app.js"; 
 
-const PORT = process.env.PORT || 8080;
-const MONGO_URI = "mongodb+srv://lucas:28g1GXpMaVxPK1jv@primeiroprojeto.g9xod.mongodb.net/?retryWrites=true&w=majority&appName=primeiroProjeto"
-// const MONGO_URI = process.env.TESTE
+const PORT = process.env.PORT || 5000;
+const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://lucas:28g1GXpMaVxPK1jv@primeiroprojeto.g9xod.mongodb.net/?retryWrites=true&w=majority&appName=primeiroProjeto"
 
 
 if (!MONGO_URI) {
