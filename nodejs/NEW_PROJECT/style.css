@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #9146FF;
+  color: white;
+  width: 260px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.status {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.status-icon {
+  color: #00ff99;
+}
+
+.channel-list {
+  max-height: 200px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.channel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #772ce8;
+  padding: 6px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.channel-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.status-dot.live {
+  background-color: #e91916;
+}
+
+.status-dot.offline {
+  background-color: #6a6a6a;
+}
+
+.channel-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ff4d4d;
+}
+
+.remove-all {
+  margin-top: 12px;
+  padding: 8px;
+  background-color: red;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.remove-all:hover {
+  background-color: darkred;
+}
